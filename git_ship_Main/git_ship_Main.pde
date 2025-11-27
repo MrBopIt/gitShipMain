@@ -11,7 +11,7 @@ boolean attitudeControl = true;
 boolean artificialGravity = true;
 boolean sensors = true; //turns on sensors
 boolean parkingBrake = false;
-boolean shields = true; //turns on shields
+boolean shield = true; //turns on shield
 
 boolean redAlert = false; //turns on red alert
 
@@ -314,7 +314,7 @@ void showCargo(){
   }
   else {
     //displays are on!
-    if(shields){
+    if(shield){
     noStroke();
     fill(0, 255, 255);
     Font.draw(105, 335, 1, _space, _space, _space, _space, _s, _h, _i, _e, _l, _d, _s, _space, _u, _p, _exclam); 
