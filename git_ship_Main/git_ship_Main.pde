@@ -9,7 +9,7 @@ boolean viewscreen = false; //powers up main viewscreen
 boolean display = false; //powers up left and right cockpit display
 boolean attitudeController = false;
 boolean artificiallyGravity = false;
-boolean sensors = false; //turns on sensors
+boolean sensor = false; //turns on sensors
 boolean parkingBrake = true;
 boolean shields = false; //turns on shields
 
