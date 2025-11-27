@@ -9,8 +9,8 @@ boolean viewscreen = false; //powers up main viewscreen
 boolean display = false; //powers up left and right cockpit display
 boolean attitudeController = false;
 boolean artificiallyGravity = false;
-boolean sensor = false; //turns on sensors
-boolean parkingBrake = true;
+boolean sensor = false; //turns on sensor
+boolean parkingBrakes = true;
 boolean shields = false; //turns on shields
 
 boolean redAlert = false; //turns on red alert
@@ -55,7 +55,7 @@ void setup(){
 }
 
 void keyPressed(){
-  if(!parkingBrake){
+  if(!parkingBrakes){
     //toggle warp drive
     atWarp = !atWarp;
     //handle new location
@@ -250,7 +250,7 @@ void drawCockpit(){
   noStroke();
   ellipse(231.25, 343.75, 6.25, 6.25);
   ellipse(368.75, 343.75, 6.25, 6.25);
-  if(sensors){
+  if(sensor){
     //ellipse(map(frameCount%20, 0, 19, 231.25, 368.75), 343.75, 6.25, 6.25);
     fill(255);
     ellipse(map(sin(frameCount/10), -1.75, 1.75, 231.25, 368.75), 343.75, 6.25, 6.25);
@@ -328,7 +328,7 @@ void drawCockpit(){
   }
   
   //location
-  if(sensors){
+  if(sensor){
     fill(white);
     ellipse(map(x, 0, 10, 237.5, 362.5), map(y, 0, 10, 237.5, 306.25), 6 + (sin(frameCount/15) * 2), 6 + (sin(frameCount/15) * 2));
   }
@@ -374,7 +374,7 @@ void showCargo(){
     
     //show instructions to player:
     // ! warning !
-    // attitude ctrl / artificial grav / sensors
+    // attitude ctrl / artificial grav / sensor
     // off-line
 
     if(!attitudeController){
@@ -389,7 +389,7 @@ void showCargo(){
       Font.draw(105, 315, 1, _a, _r, _t, _i, _f, _i, _c, _i, _a, _l, _space, _g, _r, _a, _v, _period);
       Font.draw(105, 325, 1, _o, _f, _f, _dash, _l, _i, _n, _e);
     }
-    else if(!sensors){
+    else if(!sensor){
       fill(255, 0, 0);
       Font.draw(105, 305, 1, _space, _space, _space, _space, _exclam, _space, _w, _a, _r, _n, _i, _n, _g, _space, _exclam);
       Font.draw(105, 315, 1, _f, _o, _r, _w, _a, _r, _d, _space, _s, _e, _n, _s, _o, _r, _s);
@@ -400,7 +400,7 @@ void showCargo(){
     // parking brake
     // for warp speed
     
-    else if(parkingBrake){
+    else if(parkingBrakes){
       fill(255, 0, 0);
       Font.draw(105, 305, 1, _space, _space, _space, _space, _exclam, _space, _r, _e, _l, _e, _a, _s, _e, _space, _exclam);
       Font.draw(105, 315, 1, _p, _a, _r, _k, _i, _n, _g, _space, _b, _r, _a, _k, _e);
