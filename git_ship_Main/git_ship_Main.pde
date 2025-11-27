@@ -6,7 +6,7 @@ String copilot = "";
 
 //spacecraft controls
 boolean viewscreen = false; //powers up main viewscreen
-boolean displays = false; //powers up left and right cockpit displays
+boolean display = false; //powers up left and right cockpit display
 boolean attitudeControl = false;
 boolean artificialGravity = false;
 boolean sensors = false; //turns on sensors
@@ -351,14 +351,14 @@ void showCargo(){
   //16 $ per line, 5 lines max --> 60 character message
   //+40 in y for each line at font 4
   
-  if(!displays){
-    //displays turned off
+  if(!display){
+    //display turned off
     noStroke();
     fill(grey);
     Font.draw(105, 315, 1, _space, _space, _space, _space, _space, _n, _o, _space, _s, _i, _g, _n, _a, _l); 
   }
   else {
-    //displays are on!
+    //display are on!
     if(shields){
     noStroke();
     fill(0, 255, 255);
@@ -426,8 +426,8 @@ void showStatus(){
   //16 $ per line, 5 lines max --> 60 character message
   //+40 in y for each line at font 4
   
-  if(!displays){
-    //displays turned off
+  if(!display){
+    //display turned off
     noStroke();
     fill(grey);
     Font.draw(485, 315, 1, _space, _space, _space, _space, _space, _n, _o, _space, _s, _i, _g, _n, _a, _l); 
