@@ -7,7 +7,7 @@ String copilot = "";
 //spacecraft controls
 boolean viewscreen = false; //powers up main viewscreen
 boolean display = false; //powers up left and right cockpit display
-boolean attitudeControl = false;
+boolean attitudeController = false;
 boolean artificialGravity = false;
 boolean sensors = false; //turns on sensors
 boolean parkingBrake = true;
@@ -78,7 +78,7 @@ void draw(){
   
   if(viewscreen) {
     //begin attitude control
-    if(!attitudeControl) beginDrift();
+    if(!attitudeController) beginDrift();
     
     //starfield simulation
     for(int i = 0; i < stars. length; i++){
@@ -97,7 +97,7 @@ void draw(){
     holodeck.display();
   
     //end of attitude control
-    if(!attitudeControl) endDrift();
+    if(!attitudeController) endDrift();
   }
   else {
     noSignal();
@@ -377,7 +377,7 @@ void showCargo(){
     // attitude ctrl / artificial grav / sensors
     // off-line
 
-    if(!attitudeControl){
+    if(!attitudeController){
       fill(255, 0, 0);
       Font.draw(105, 305, 1, _space, _space, _space, _space, _exclam, _space, _w, _a, _r, _n, _i, _n, _g, _space, _exclam);
       Font.draw(105, 315, 1, _a, _t, _t, _i, _t, _u, _d, _e, _space, _c, _o, _n, _t, _r, _o, _l);
