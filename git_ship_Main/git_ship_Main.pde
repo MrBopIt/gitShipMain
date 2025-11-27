@@ -8,7 +8,7 @@ String copilot = "";
 boolean viewscreen = false; //powers up main viewscreen
 boolean display = false; //powers up left and right cockpit display
 boolean attitudeController = false;
-boolean artificialGravity = false;
+boolean artificiallyGravity = false;
 boolean sensors = false; //turns on sensors
 boolean parkingBrake = true;
 boolean shields = false; //turns on shields
@@ -383,7 +383,7 @@ void showCargo(){
       Font.draw(105, 315, 1, _a, _t, _t, _i, _t, _u, _d, _e, _space, _c, _o, _n, _t, _r, _o, _l);
       Font.draw(105, 325, 1, _o, _f, _f, _dash, _l, _i, _n, _e);
     }
-    else if(!artificialGravity){
+    else if(!artificiallyGravity){
       fill(255, 0, 0);
       Font.draw(105, 305, 1, _space, _space, _space, _space, _exclam, _space, _w, _a, _r, _n, _i, _n, _g, _space, _exclam);
       Font.draw(105, 315, 1, _a, _r, _t, _i, _f, _i, _c, _i, _a, _l, _space, _g, _r, _a, _v, _period);
